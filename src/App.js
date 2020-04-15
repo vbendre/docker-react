@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Vishal React APP !
+          Vishal React APP - in AWS!
         </p>
         <a
           className="App-link"
