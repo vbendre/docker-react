@@ -11,7 +11,7 @@ script:
 deploy:
     access_key_id: "$access_key_id"
     secret_access_key:
-        secure: "secret_access_key"
+        secure: "$secret_access_key"
     provider: elasticbeanstalk
     region: "us-east-2"
     app: "docker-react"
