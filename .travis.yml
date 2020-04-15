@@ -7,3 +7,16 @@ before_install:
 
 script:
     - docker run -e CI=true vishalbendre/docker-react npm run test -- --coverage--       
+
+deploy:
+    access_key_id: "$access_key_id"
+    secret_access_key:
+        secure: "secret_access_key"
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "docker-react"
+    env: "DockerReact-env"
+    bucket_name: "elasticbeanstalk-us-east-2-455444192241"
+    bucket_path: "docker-react"
+    on:
+        branch: master
