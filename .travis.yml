@@ -9,14 +9,15 @@ script:
     - docker run -e CI=true vishalbendre/docker-react npm run test -- --coverage--       
 
 deploy:
-    application: "docker-react"
-    access_key_id: "$access_key_id"
-    secret_access_key: "$secret_access_key"
     provider: elasticbeanstalk
     region: "us-east-2"
     app: "docker-react"
     env: "DockerReact-env"
     bucket_name: "elasticbeanstalk-us-east-2-455444192241"
     bucket_path: "docker-react"
+    application: "docker-react"
+    bucket_path: "docker-react"
     on:
         branch: master
+    access_key_id: "$AWS_ACCESS_KEY"
+    secret_access_key: "$AWS_SECRET_KEY"
