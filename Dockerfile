@@ -12,6 +12,6 @@ COPY . .
 RUN npm run build
 
 FROM nginx
-EXPOSE 80
+#EXPOSE 80
 #COPY --from=builder /app/build /usr/share/nginx/html removed phase name and using integer value
 COPY --from=0 /app/build /usr/share/nginx/html
